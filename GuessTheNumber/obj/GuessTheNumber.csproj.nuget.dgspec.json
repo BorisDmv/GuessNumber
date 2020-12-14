@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Boris\\source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj": {}
+    "D:\\Projects\\GuessNumber\\GuessTheNumber\\GuessTheNumber.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Boris\\source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj": {
+    "D:\\Projects\\GuessNumber\\GuessTheNumber\\GuessTheNumber.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Boris\\source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj",
+        "projectUniqueName": "D:\\Projects\\GuessNumber\\GuessTheNumber\\GuessTheNumber.csproj",
         "projectName": "GuessTheNumber",
-        "projectPath": "C:\\Users\\Boris\\source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj",
-        "packagesPath": "C:\\Users\\Boris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Boris\\source\\repos\\GuessTheNumber\\GuessTheNumber\\obj\\",
+        "projectPath": "D:\\Projects\\GuessNumber\\GuessTheNumber\\GuessTheNumber.csproj",
+        "packagesPath": "C:\\Users\\boris\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\GuessNumber\\GuessTheNumber\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Boris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\boris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,11 +22,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.emzi0767.com/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -53,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

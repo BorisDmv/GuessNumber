@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IBDkfOoepobdKgZl9h4Bn8jyY7K6lHxmEtqKVREzWYqv89t1VVfrtnwJ67iHptkp3RK26fLezKU/22PNtw4OhA==",
+  "dgSpecHash": "XYa3QOSe+YCXWHz0GeaTUZcJE9vgeDKVg7IBy417Hi7zpiSdoW6a8hz/6gNqIlIOkjTbwtQ0f9eO0ypFqlTSnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Boris\\source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj",
+  "projectFilePath": "D:\\Projects\\GuessNumber\\GuessTheNumber\\GuessTheNumber.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
