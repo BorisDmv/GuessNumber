@@ -18,7 +18,7 @@ namespace GuessTheNumber
             //User
             int userNumber = 0;
             bool win = false;
-            int life = 5;
+            int life = 15;
             bool lose = false;
 
 
@@ -61,21 +61,21 @@ namespace GuessTheNumber
                             }
                             else
                             {    
-                                //Console.WriteLine("User number is " + userNumber);
+
                                 int firstNum = userNumber / 100;
                                 int secondNum = userNumber / 10;
                                 secondNum = secondNum % 10;
                                 int thirdNum = userNumber % 10;
-                                //Console.WriteLine(firstNum);
-                                //Console.WriteLine(secondNum % 10);
-                                //Console.WriteLine(thirdNum);
+
 
                                 var firstItem = aux.ElementAt(0);
                                 var secondItem = aux.ElementAt(1);
                                 var thirdItem = aux.ElementAt(2);
 
-                                bool numberGuessed = aux.Any(item => item == firstNum || item == secondNum || item == thirdNum);
-                               // Console.WriteLine(firstNumFromRandom);
+                                bool firstGuessedNoPos = aux.IndexOf(firstNum) != -1;
+                                bool secondGuessedNoPos = aux.IndexOf(secondNum) != -1;
+                                bool thirdGuessedNoPos = aux.IndexOf(thirdNum) != -1;
+
 
                                 if (firstNum == firstItem && secondNum == secondItem && thirdNum == thirdItem)
                                 {
@@ -84,28 +84,37 @@ namespace GuessTheNumber
                                 }
                                 else if (firstNum == firstItem && secondNum == secondItem || firstNum == firstItem && thirdNum == thirdItem || secondNum == secondItem && thirdNum == thirdItem)
                                 {
-                                    life--;
-                                    Console.WriteLine("Life left: " + life);
-                                    Console.WriteLine("You guessed two numbers and there position");
+                                    Console.WriteLine("You guessed two numbers and their position");
                                 }
                                 else if (firstNum == firstItem || secondNum == secondItem || thirdNum == thirdItem)
                                 {
-                                    life--;
-                                    Console.WriteLine("Life left: " + life);
-                                    Console.WriteLine("You guessed one numbers and position");
+                                    Console.WriteLine("You guessed one number and position");
+
+                                    //Checking other two if they are included
+                                    if (firstNum != firstItem || secondNum != secondItem || thirdNum != thirdItem)
+                                    {
+                                        Console.WriteLine("You guessed one number and position and the other two maybe are included");
+                                    }
                                 }
-                                else if (numberGuessed == true)
+                                else if (firstGuessedNoPos == true && secondGuessedNoPos == true && thirdGuessedNoPos == true)
                                 {
-                                    life--;
-                                    Console.WriteLine("Life left: " + life);
+                                    Console.WriteLine("You guessed all numbers but not the positions");
+                                }
+                                else if(firstGuessedNoPos == true && secondGuessedNoPos == true || firstGuessedNoPos == true && thirdGuessedNoPos == true || secondGuessedNoPos == true && thirdGuessedNoPos == true)
+                                {
+                                    Console.WriteLine("You guessed two numbers but not the positions");
+                                }
+                                else if (firstGuessedNoPos == true || secondGuessedNoPos == true || thirdGuessedNoPos == true)
+                                {
                                     Console.WriteLine("You guessed one number but not the position");
                                 }
                                 else
                                 {
-                                    life--;
-                                    Console.WriteLine("Life left: " + life);
                                     Console.WriteLine("No matches");
                                 }
+
+                                life--;
+                                Console.WriteLine("Life: " + life);
                             }
                         }
                         catch (Exception)
@@ -122,6 +131,8 @@ namespace GuessTheNumber
                     lose = true;
                     Console.WriteLine();
                     Console.WriteLine("You Lose!");
+                    foreach(int auxs in aux)
+                        Console.Write(auxs);
                 }
                 else if(win == true)
                 {
